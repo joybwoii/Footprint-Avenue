@@ -1,0 +1,10 @@
+.card{
+    width: 15rem;
+    height: 15rem;
+    background: white;
+}
+.description{
+    width: 15rem;
+    height: 5rem;
+    background: white;
+}

@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.header {
+    width:100vw;
+    height: 5rem;
+    background: white;
+    position: fixed;
+    top: 0;
+}
+.categories {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    color: grey;
+    font-size: medium;
+    margin-left: 13rem;
+    margin-top: -4.5rem;
+}
+.options{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    color: grey;
+    gap: 1.5rem;
+    margin-left: 77rem;
+    margin-top: -1.5rem;
+}
+.other{
+    list-style-type: none;
+    display:flex;
+    color:black;
+    gap: 1.5rem;
+    margin-left: 90rem;
+    margin-top: -1.3rem;
+    font-size:large;
+}
