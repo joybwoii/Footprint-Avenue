@@ -1,14 +1,11 @@
 
 import './App.css'
-import Cover from './components/user/cover/cover.jsx'
-import Navbar from './components/user/Navbar/Navbar.jsx'
-
+import Login from './components/login/Login.jsx'
 function App() {
 
   return (
     <>
-      <Navbar /> 
-      <Cover />
+     <Login />
     </>
   )
 }
