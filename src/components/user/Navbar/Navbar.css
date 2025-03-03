@@ -1,13 +1,15 @@
-
+/* Reset default margins and padding for consistency */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Navbar Styling */
 .navbar {
-    width: 100%; 
-    height: 5rem; 
-    background-color: #ffffff; 
+    width: 100%; /* Full screen width */
+    height: 5rem; /* Matches your original height */
+    background-color: #ffffff; /* White background to match screenshot */
     position: fixed; /* Stays at the top */
     top: 0;
     z-index: 1000; /* Ensures it stays on top of other content */
@@ -32,14 +34,14 @@
 }
 
 .nav-categories li {
-    color: #000000; /* White text to match screenshot */
+    color: #666; /* Light gray text to match screenshot */
     font-size: 1em; /* Medium-sized text */
     font-family: Arial, sans-serif; /* Consistent font */
     cursor: pointer; /* Indicates clickable items */
 }
 
 .nav-categories li:hover {
-    color: #4CAF50; /* Green hover effect for consistency with your branding */
+    color: #000; /* Black on hover for contrast */
 }
 
 /* Right Options (e.g., Our Story, Contact) */
@@ -51,14 +53,14 @@
 }
 
 .nav-options li {
-    color: #000000; /* White text to match screenshot */
+    color: #666; /* Light gray text to match screenshot */
     font-size: 1em;
     font-family: Arial, sans-serif;
     cursor: pointer; /* Indicates clickable items */
 }
 
 .nav-options li:hover {
-    color: #4CAF50; /* Green hover effect */
+    color: #000; /* Black on hover for contrast */
 }
 
 /* Icons (Cart and User) */
@@ -71,12 +73,31 @@
 
 .cart-icon, .user-icon {
     font-size: 1.5em; /* Adjust size as needed */
-    color: #000000; /* White icons to match screenshot */
+    color: #000; /* Black icons to match screenshot */
+    position: relative; /* For the cart badge positioning */
     cursor: pointer; /* Indicates clickable items */
 }
 
 .cart-icon:hover, .user-icon:hover {
-    color: #4CAF50; /* Green hover effect */
+    color: #4CAF50; /* Green hover effect for consistency with your branding */
+}
+
+/* Cart Badge (for cart icon) */
+.cart-icon::after {
+    content: '1'; /* Example badge number, update dynamically in React */
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ff0000; /* Red badge to match common design */
+    color: #fff; /* White text for contrast */
+    font-size: 0.6em; /* Smaller text for badge */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; /* Circular badge */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif; /* Consistent font */
 }
 
 /* Responsiveness */
@@ -100,6 +121,12 @@
 
     .cart-icon, .user-icon {
         font-size: 1.2em; /* Reduce icon size on tablets */
+    }
+
+    .cart-icon::after {
+        width: 10px;
+        height: 10px;
+        font-size: 0.5em;
     }
 }
 
@@ -126,5 +153,11 @@
 
     .cart-icon, .user-icon {
         font-size: 1em; /* Further reduce icon size on mobile */
+    }
+
+    .cart-icon::after {
+        width: 8px;
+        height: 8px;
+        font-size: 0.4em;
     }
 }

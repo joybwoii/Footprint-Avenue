@@ -1,32 +1,32 @@
-import  'react'
-import './Navbar.css'
+import React from 'react';
+import './Navbar.css';
 import { BsHandbagFill } from "react-icons/bs";
 import { FaUser } from "react-icons/fa6";
-
+import { Link } from 'react-router-dom';
 
 function Navbar() {
-  return (
-    <nav className="navbar">
-            <div className="navbar-brand">
-                <img src="/assets/site-logo.svg" alt="PLASHOE Logo" /> {/* Replace with actual logo or text */}
-            </div>
+    return (
+        <nav className="navbar">
+            <Link to="/" className="navbar-brand">
+                <img src="/assets/site-logo.svg" alt="PLASHOE Logo" />
+            </Link>
             <ul className="nav-categories">
-                <li>MEN</li>
-                <li>WOMEN</li>
-                <li>COLLECTION</li>
-                <li>LOOKBOOK</li>
-                <li>SALE</li>
+                <li><Link to="/products">MEN</Link></li>
+                <li><Link to="/products">WOMEN</Link></li>
+                <li><Link to="/products">COLLECTION</Link></li>
+                <li><Link to="/products">LOOKBOOK</Link></li>
+                <li><Link to="/products">SALE</Link></li>
             </ul>
             <ul className="nav-options">
-                <li>OUR STORY</li>
-                <li>CONTACT</li>
+                <li><Link to="/about">OUR STORY</Link></li>
+                <li><Link to="/contact">CONTACT</Link></li>
             </ul>
             <ul className="nav-icons">
-                <li><BsHandbagFill className="cart-icon" /></li>
-                <li><FaUser className="user-icon" /></li>
+                <li><Link to="/cart"><BsHandbagFill className="cart-icon" /></Link></li>
+                <li><Link to="/profile"><FaUser className="user-icon" /></Link></li>
             </ul>
         </nav>
-
-  )
+    );
 }
-export default Navbar
+
+export default Navbar;
