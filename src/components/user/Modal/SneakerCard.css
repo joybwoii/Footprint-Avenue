@@ -1,0 +1,95 @@
+.sneaker-card {
+    display: flex;
+    border: 1px solid #ccc;
+    max-width: 600px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    align-items: center;
+  }
+  .sneaker-image {
+    position: relative;
+    flex: 1;
+  }
+  .sneaker-image img {
+    width: 100%;
+    height: auto;
+  }
+  .sale-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #6b705c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+  }
+  .sneaker-details {
+    flex: 1;
+    padding: 10px;
+  }
+  .category {
+    color: #6b705c;
+    font-size: 12px;
+    margin: 0;
+  }
+  .product-title {
+    margin: 5px 0;
+    font-size: 18px;
+  }
+  .price {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  .original-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 10px;
+  }
+  .sale-price {
+    color: #000;
+    font-weight: bold;
+  }
+  .description {
+    font-size: 10px;
+    color: #555;
+    margin: 10px 0;
+  }
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  .quantity-btn {
+    padding:0px;
+    width: 30px;
+    background-color: #6b705c;
+    cursor: pointer;
+    align-items: center;
+  }
+  .quantity {
+    font-size: 16px;
+    color: black;
+  }
+  .add-to-cart {
+    background-color: #6b705c;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 150px;
+    border-radius: 0;
+    font-size: small;
+  }
+  .add-to-cart:hover {
+    background-color: #5a5e4c;
+  }
+  .select{
+    color:rgb(255, 255, 255);
+    font-size: x-small;
+    background-color:#6b705c;
+    padding:5px;
+    border-radius: 5px;
+    margin-left: 70px;
+    width: 50px;
+  }

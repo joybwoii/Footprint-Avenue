@@ -1,0 +1,161 @@
+/* General Reset and Container Styles */
+.maindiv{
+  
+}
+
+
+.shopping-cart-container {
+  width: 100%;
+  max-width: 28rem; /* Keeps the cart at a reasonable width */
+  margin-left: 0; /* Pushes the cart to the right */
+  margin-right: auto; /* Ensures no extra space on the right */
+  background-color: #ffffff;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  /* Header Styles */
+  .shopping-cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .shopping-cart-title {
+    font-size: 1.125rem; /* Equivalent to Tailwind's text-lg */
+    font-weight: 600;
+    color: #374151;
+  }
+  
+  .close-button {
+    font-size: 1.5rem;
+    color: #6b7280;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .close-button:hover {
+    color: #4b5563;
+  }
+  
+  /* Product Item Styles */
+  .product-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .product-image {
+    width: 4rem; /* Equivalent to Tailwind's w-16 */
+    height: 4rem; /* Equivalent to Tailwind's h-16 */
+    object-fit: cover;
+    margin-right: 1rem;
+  }
+  
+  .product-details {
+    flex: 1;
+  }
+  
+  .product-name {
+    font-size: 0.875rem; /* Equivalent to Tailwind's text-sm */
+    font-weight: 500;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity-button {
+    padding: 0.25rem 0.5rem; /* Equivalent to Tailwind's px-2 py-1 */
+    background-color: #e5e7eb;
+    color: #374151;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .quantity-button:hover {
+    background-color: #d1d5db;
+  }
+  
+  .decrement {
+    border-radius: 0.25rem 0 0 0.25rem; /* Rounded left edge */
+  }
+  
+  .increment {
+    border-radius: 0 0.25rem 0.25rem 0; /* Rounded right edge */
+  }
+  
+  .quantity-value {
+    padding: 0.25rem 1rem; /* Equivalent to Tailwind's px-4 py-1 */
+    background-color: #f3f4f6;
+    color: #374151;
+    margin: 0 0.25rem;
+  }
+  
+  .product-price {
+    font-size: 0.875rem; /* Equivalent to Tailwind's text-sm */
+    font-weight: 500;
+    color: #1f2937;
+  }
+  
+  .remove-button {
+    font-size: 1.5rem;
+    color: #6b7280;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .remove-button:hover {
+    color: #4b5563;
+  }
+  
+  /* Footer Styles */
+  .cart-footer {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1rem;
+  }
+  
+  .subtotal {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    color: #374151;
+  }
+  
+  .cart-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 400px;
+  }
+  
+  .view-cart-button,
+  .checkout-button {
+    width: 100%;
+    background-color: #000000; /* Approximate olive-green from image */
+    color: #ffffff;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+   
+  }
+  
+  .view-cart-button:hover,
+  .checkout-button:hover {
+    background-color: #374151;
+  }
