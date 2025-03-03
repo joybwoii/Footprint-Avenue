@@ -17,7 +17,17 @@
 .logincontainer{
     width: 25vw;
     height:400px;
-    background: rgb(130, 129, 129);
     margin-top: 10rem;
     margin-left: 17rem;
+    color:rgb(0, 0, 0);
+}
+button{
+    background: black;
+    color: white;
+}
+input{
+    width: 250px;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 10px;
 }

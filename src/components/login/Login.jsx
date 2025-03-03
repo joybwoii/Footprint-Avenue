@@ -12,10 +12,11 @@ function Login() {
             <img src="/assets/site-logo.svg" alt="" />
         </div>
         <div className='logincontainer'>
-            <h1>Login</h1>
-         <input type="text" />
-         <input type="password" />
-         <button>Login</button>
+         <form>
+         <input type="text" placeholder='Email'/><br /><br /><br />
+         <input type="password" placeholder='Password' /><br /><br /><br />
+         <button>Login</button><br /><br />
+         </form>
          <p>Dont have an Account?</p>
          <a href="">Register</a>
         </div>
