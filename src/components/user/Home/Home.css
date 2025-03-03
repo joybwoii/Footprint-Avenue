@@ -1,0 +1,25 @@
+.home-container {
+    width: 100%;
+    max-width: 1200px; /* Limit width for larger screens */
+    margin: 0 auto; /* Center the content */
+    padding: 20px; /* Add padding for spacing */
+    display: flex;
+    flex-direction: column; /* Stack components vertically */
+    gap: 40px; /* Space between Cover and ShoeComponent */
+    background-color: #fff; /* White background to match PLASHOE design */
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .home-container {
+      padding: 15px; /* Reduce padding on tablets */
+      gap: 30px; /* Reduce gap on tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .home-container {
+      padding: 10px; /* Further reduce padding on mobile */
+      gap: 20px; /* Further reduce gap on mobile */
+    }
+  }

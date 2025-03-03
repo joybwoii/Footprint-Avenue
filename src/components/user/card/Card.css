@@ -1,70 +1,160 @@
+/* Reset default margins and padding for consistency */
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Product Grid Container */
+.product-grid {
+  display: flex; /* Use flexbox to arrange cards horizontally */
+  flex-wrap: wrap; /* Allows cards to wrap to the next line on smaller screens */
+  justify-content: center; /* Centers cards horizontally */
+  gap: 20px; /* Space between cards */
+  padding: 20px; /* Adds padding around the grid */
+  max-width: 1200px; /* Limits the grid width for large screens */
+  margin: 0 auto; /* Centers the grid horizontally */
+}
+
+/* Individual Product Card */
 .product-card {
-    position: relative;
-    width: 350px;
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    font-family: Arial, sans-serif;
+  position: relative;
+  width: 250px; /* Reduced width for better horizontal fit, adjust as needed */
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover for visual feedback */
+}
+
+/* Product Image */
+.product-image {
+  background: #f5f5f5;
+  padding: 2px;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* Quick View Button */
+.quick-view {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ffffff;
+  color: #000; /* Black text for visibility on white background */
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease, background 0.3s ease; /* Smooth transition */
+}
+
+.product-card:hover .quick-view {
+  opacity: 1; /* Show on hover */
+  background: #343434; /* Dark gray on hover */
+  color: white; /* White text on hover */
+}
+
+/* Product Details */
+.product-details {
+  padding: 10px;
+}
+
+.product-details h3 {
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Price Section */
+.price {
+  display: flex;
+  justify-content: center; /* Center the price elements */
+  align-items: center;
+  gap: 8px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 14px;
+}
+
+.new-price {
+  color: #2f3530;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+/* Rating */
+.rating {
+  color: #ccc;
+  margin-top: 5px;
+  font-size: 1.2em; /* Larger, more visible stars */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .product-card {
+      width: 200px; /* Reduce card width on tablets */
   }
-  .product-image {
-    background: #f5f5f5;
-    padding: 2px;
+
+  .product-grid {
+      gap: 15px; /* Reduce gap on tablets */
+      padding: 15px; /* Reduce padding on tablets */
   }
-  .product-image img {
-    width: 100%;
-    height: auto;
-  }
+
   .quick-view {
-    background: #ffffff;
-    color: white;
-    padding: 6px;
-    cursor: pointer;
-    font-size: 17px;
+      font-size: 12px; /* Reduce quick view text size */
   }
-  .quick-view:hover{
-    background: black;
-  }
-  .product-card:hover .quick-view {
-    background: #343434;
-    color: white;
-    padding: 6px;
-    cursor: pointer;
-    font-size: 17px;
-    transition: 0.3s;
-  } 
-  .product-details {
-    padding: 10px;
-  }
+
   .product-details h3 {
-    color: black;
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 5px;
+      font-size: 14px; /* Reduce title size on tablets */
   }
-  .price{
-    display: flex;
-    align-items: center;
-    margin-left: 120px;
-    gap: 8px;
-  }
-  .old-price {
-    text-decoration: line-through;
-    color: #999;
-    font-size: 14px;
-  }
+
   .new-price {
-    color: #2f3530;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 5px 0;
+      font-size: 16px; /* Reduce price size on tablets */
   }
-  
+}
+
+@media (max-width: 480px) {
+  .product-card {
+      width: 150px; /* Further reduce card width on mobile */
+  }
+
+  .product-grid {
+      gap: 10px; /* Further reduce gap on mobile */
+      padding: 10px; /* Further reduce padding on mobile */
+  }
+
+  .quick-view {
+      font-size: 10px; /* Further reduce quick view text size */
+      padding: 4px 8px; /* Reduce padding on mobile */
+  }
+
+  .product-details h3 {
+      font-size: 12px; /* Further reduce title size on mobile */
+  }
+
+  .new-price {
+      font-size: 14px; /* Further reduce price size on mobile */
+  }
+
   .rating {
-    color: #ccc;
-    margin-top: 5px;
-    font-size: x-large;
+      font-size: 1em; /* Further reduce star size on mobile */
   }
-  
+}

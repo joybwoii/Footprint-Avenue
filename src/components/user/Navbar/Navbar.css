@@ -1,40 +1,163 @@
-*{
+/* Reset default margins and padding for consistency */
+* {
     margin: 0;
-    border: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-.header {
-    width:100vw;
-    height: 5rem;
-    background: white;
-    position: fixed;
+
+/* Navbar Styling */
+.navbar {
+    width: 100%; /* Full screen width */
+    height: 5rem; /* Matches your original height */
+    background-color: #ffffff; /* White background to match screenshot */
+    position: fixed; /* Stays at the top */
     top: 0;
+    z-index: 1000; /* Ensures it stays on top of other content */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Evenly spaces items with room on both sides */
+    align-items: center; /* Vertically centers items */
+    padding: 0 2rem; /* Adds padding on left and right for spacing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow for depth */
 }
-.categories {
+
+/* Logo/Brand (PLASHOE) */
+.navbar-brand img {
+    height: 2rem; /* Adjust height to match the logo size in the screenshot */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Navigation Categories */
+.nav-categories {
     list-style-type: none;
     display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
-    color: grey;
-    font-size: medium;
-    margin-left: 13rem;
-    margin-top: -4.5rem;
+    gap: 1.5rem; /* Space between items */
 }
-.options{
+
+.nav-categories li {
+    color: #666; /* Light gray text to match screenshot */
+    font-size: 1em; /* Medium-sized text */
+    font-family: Arial, sans-serif; /* Consistent font */
+    cursor: pointer; /* Indicates clickable items */
+}
+
+.nav-categories li:hover {
+    color: #000; /* Black on hover for contrast */
+}
+
+/* Right Options (e.g., Our Story, Contact) */
+.nav-options {
     list-style-type: none;
     display: flex;
-    flex-direction: row;
-    color: grey;
-    gap: 1.5rem;
-    margin-left: 77rem;
-    margin-top: -1.5rem;
+    gap: 1.5rem; /* Space between items */
+    align-items: center; /* Vertically aligns items */
 }
-.other{
+
+.nav-options li {
+    color: #666; /* Light gray text to match screenshot */
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    cursor: pointer; /* Indicates clickable items */
+}
+
+.nav-options li:hover {
+    color: #000; /* Black on hover for contrast */
+}
+
+/* Icons (Cart and User) */
+.nav-icons {
     list-style-type: none;
-    display:flex;
-    color:black;
-    gap: 1.5rem;
-    margin-left: 90rem;
-    margin-top: -1.3rem;
-    font-size:large;
+    display: flex;
+    gap: 1.5rem; /* Space between icons */
+    align-items: center; /* Vertically aligns icons */
+}
+
+.cart-icon, .user-icon {
+    font-size: 1.5em; /* Adjust size as needed */
+    color: #000; /* Black icons to match screenshot */
+    position: relative; /* For the cart badge positioning */
+    cursor: pointer; /* Indicates clickable items */
+}
+
+.cart-icon:hover, .user-icon:hover {
+    color: #4CAF50; /* Green hover effect for consistency with your branding */
+}
+
+/* Cart Badge (for cart icon) */
+.cart-icon::after {
+    content: '1'; /* Example badge number, update dynamically in React */
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ff0000; /* Red badge to match common design */
+    color: #fff; /* White text for contrast */
+    font-size: 0.6em; /* Smaller text for badge */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; /* Circular badge */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif; /* Consistent font */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 1rem; /* Reduce padding on tablets */
+        height: 4rem; /* Slightly reduce height on smaller screens */
+    }
+
+    .navbar-brand img {
+        height: 1.5rem; /* Reduce logo size on tablets */
+    }
+
+    .nav-categories, .nav-options, .nav-icons {
+        gap: 1rem; /* Reduce gap on smaller screens */
+    }
+
+    .nav-categories li, .nav-options li {
+        font-size: 0.9em; /* Reduce text size on tablets */
+    }
+
+    .cart-icon, .user-icon {
+        font-size: 1.2em; /* Reduce icon size on tablets */
+    }
+
+    .cart-icon::after {
+        width: 10px;
+        height: 10px;
+        font-size: 0.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically on mobile */
+        height: auto; /* Adjust height dynamically */
+        padding: 0.5rem 1rem; /* Further reduce padding on mobile */
+    }
+
+    .navbar-brand {
+        margin-bottom: 0.5rem; /* Space below brand on mobile */
+    }
+
+    .nav-categories, .nav-options, .nav-icons {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items vertically */
+        gap: 0.5rem; /* Reduce gap on mobile */
+    }
+
+    .nav-categories li, .nav-options li {
+        font-size: 0.8em; /* Further reduce text size on mobile */
+    }
+
+    .cart-icon, .user-icon {
+        font-size: 1em; /* Further reduce icon size on mobile */
+    }
+
+    .cart-icon::after {
+        width: 8px;
+        height: 8px;
+        font-size: 0.4em;
+    }
 }
