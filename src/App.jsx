@@ -1,11 +1,11 @@
 
 import './App.css'
-import Cart from './components/user/cart/Cart.jsx'
+import Card from './components/user/card/Card.jsx'
 function App() {
 
   return (
     <>
-     <Cart />
+     <Card />
     </>
   )
 }
