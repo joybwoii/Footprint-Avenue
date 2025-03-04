@@ -1,0 +1,132 @@
+/* Reset default margins and padding for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Shoe Component */
+.shoe-component {
+    display: flex;
+    width: 100%; /* Full width for responsiveness */
+    max-width: 1200px; /* Limit width for larger screens */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #ffffff; /* White background to match PLASHOE design */
+    overflow: hidden;
+    border-radius: 12px; /* Rounded corners for modern look */
+    margin: 20px auto; /* Center the component horizontally with spacing */
+}
+
+/* Shoe Image */
+.shoe-image {
+    flex: 1;
+    background-color: #f5f5f5; /* Light gray background for image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.shoe-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensures the image fits without distortion */
+}
+
+/* Shoe Info */
+.shoe-info {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff; /* White background for consistency */
+}
+
+.shoe-info h3 {
+    color: #4CAF50; /* Green color for "About Us" to match PLASHOE branding */
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+}
+
+.shoe-info h2 {
+    font-size: 24px;
+    margin: 0 0 15px 0;
+    color: #333; /* Dark gray for title */
+    font-family: Arial, sans-serif;
+}
+
+.shoe-info p {
+    font-size: 16px; /* Slightly larger for readability */
+    color: #666; /* Light gray for text */
+    line-height: 1.6; /* Improved line height for readability */
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.read-more {
+    color: #4CAF50; /* Green for Read More to match branding */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Body Styling (for standalone use, optional) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #f5f5f5; /* Light gray background for page */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .shoe-component {
+        flex-direction: column; /* Stack on tablets */
+        margin: 10px auto; /* Reduce margin on tablets */
+    }
+
+    .shoe-image, .shoe-info {
+        flex: none; /* Remove flex grow/shrink on mobile */
+        width: 100%; /* Full width on tablets */
+        padding: 15px; /* Reduce padding on tablets */
+    }
+
+    .shoe-info h2 {
+        font-size: 20px; /* Reduce title size on tablets */
+    }
+
+    .shoe-info p {
+        font-size: 14px; /* Reduce text size on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .shoe-component {
+        margin: 5px auto; /* Further reduce margin on mobile */
+    }
+
+    .shoe-image, .shoe-info {
+        padding: 10px; /* Further reduce padding on mobile */
+    }
+
+    .shoe-info h2 {
+        font-size: 18px; /* Further reduce title size on mobile */
+    }
+
+    .shoe-info p {
+        font-size: 12px; /* Further reduce text size on mobile */
+    }
+
+    .read-more {
+        font-size: 12px; /* Reduce Read More size on mobile */
+    }
+}
